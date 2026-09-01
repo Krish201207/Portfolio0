@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krish | Portfolio</title>
+<style>
+:root{--bg:#03070d;--card:#07101a;--line:#17354d;--blue:#4db8ff;--blue2:#00d9ff;--text:#eef9ff;--muted:#9bb9c9}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+nav{position:sticky;top:0;z-index:20;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;background:rgba(5,8,5,.90);backdrop-filter:blur(16px);border-bottom:1px solid #12283a}
+.logo{font-size:25px;font-weight:800;color:var(--blue)}
+nav ul{display:flex;gap:26px;list-style:none}nav a{color:#b5c9d8;text-decoration:none;font-size:14px;font-weight:600}nav a:hover{color:var(--blue)}
+.hero{min-height:88vh;padding:70px 7%;display:flex;align-items:center;background:radial-gradient(circle at 75% 35%,#062d4a 0,#03070d 42%)}
+.hero-wrap{max-width:1150px;width:100%;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:70px}
+.eyebrow{color:var(--blue);font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(52px,7vw,86px);line-height:1;letter-spacing:-4px;margin:16px 0}h1 span{color:var(--blue)}
+.hero p{font-size:19px;color:var(--muted);max-width:650px}.buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:13px 22px;border-radius:9px;text-decoration:none;font-weight:700;color:white;background:var(--blue2);box-shadow:0 0 18px rgba(0,217,255,.25);border:1px solid var(--blue2)}.btn.secondary{background:transparent;border-color:var(--line)}.btn:hover{transform:translateY(-2px)}
+.photo-wrap{display:flex;justify-content:center}.photo-ring{padding:9px;border:1px solid #4b82bb;border-radius:50%;box-shadow:0 0 70px rgba(0,217,255,.20)}
+.profile-image{display:block;width:300px;height:300px;border-radius:50%;object-fit:cover;border:3px solid var(--blue);box-shadow:0 0 22px rgba(0,217,255,.38)}
+section{max-width:1150px;margin:auto;padding:90px 7%}.kicker{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.section-title{font-size:40px;margin:5px 0 30px}
+.card{background:linear-gradient(145deg,#07101a,#050b12);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 18px 50px rgba(0,0,0,.18)}.card:hover{border-color:#00e5ff}
+.about{font-size:18px;color:#b2c7d8}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.skill{padding:17px;border:1px solid var(--line);background:#06101a;border-radius:12px;font-weight:700}.skill small{display:block;color:var(--blue);font-size:11px;margin-top:2px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card h3{color:var(--blue);margin-bottom:7px}.muted{color:var(--muted);font-size:14px}
+.project-title{font-size:27px;color:white!important}.tech{font-size:12px;color:var(--blue);font-weight:800;letter-spacing:1.5px}
+.timeline{display:grid;gap:15px}.timeline .card{display:grid;grid-template-columns:140px 1fr;gap:20px}.year{color:var(--blue);font-weight:800}
+.contact{text-align:center}.contact p{margin:10px;color:var(--muted)}.contact a{color:var(--blue);text-decoration:none}
+footer{text-align:center;padding:28px;border-top:1px solid var(--line);color:#718b9c;font-size:13px}
+
+.certificate-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.certificate-card{overflow:hidden;background:linear-gradient(145deg,#0d1724,#08111c);border:1px solid #146b91;box-shadow:0 0 18px rgba(0,217,255,.08);border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.35),0 0 28px rgba(0,217,255,.08)}
+.certificate-image-wrap{padding:14px;background:#07111b;border-bottom:1px solid #24517a}
+.certificate-image{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px}
+.certificate-info{padding:22px}.certificate-info h3{color:#4db8ff!important}
+.certificate-link{display:inline-block;margin-top:14px;padding:9px 14px;border:1px solid #3b9df5;border-radius:8px;color:#67d9ff;text-decoration:none;font-weight:700;font-size:13px}
+.certificate-link:hover{background:#082a42;box-shadow:0 0 16px rgba(0,217,255,.28)}
+.certificate-placeholder{min-height:205px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#07111b,#10243a);border-bottom:1px solid #24517a;color:#4db8ff;font-size:42px;font-weight:800}
+
+@media(max-width:850px){nav{flex-direction:column;gap:12px}nav ul{gap:14px;flex-wrap:wrap;justify-content:center}.hero-wrap{grid-template-columns:1fr;text-align:center}.photo-wrap{order:-1}.hero p{margin:auto}.buttons{justify-content:center}.profile-image{width:230px;height:230px}.skills{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.certificate-grid{grid-template-columns:1fr}.timeline .card{grid-template-columns:1fr;gap:5px}section{padding:70px 5%}}
+@media(max-width:500px){.skills{grid-template-columns:1fr}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo">KS</div>
+<ul>
+<li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#project">Project</a></li><li><a href="#education">Education</a></li><li><a href="#certificates">Certificates</a></li><li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<header class="hero">
+<div class="hero-wrap">
+<div>
+<div class="eyebrow">AI &amp; ML Student</div>
+<h1>Hi, I'm <span>Krish</span></h1>
+<p>I am interested in programming and solving real-world problems, with a growing focus on AI &amp; ML.</p>
+<div class="buttons"><a class="btn" href="#project">View Project</a><a class="btn secondary" href="#contact">Contact Me</a></div>
+</div>
+<div class="photo-wrap"><div class="photo-ring"><img src="profile.png" alt="Krish" class="profile-image"></div></div>
+</div>
+</header>
+
+<section id="about"><div class="kicker">01 / Profile</div><h2 class="section-title">About Me</h2><div class="card about">
+I am a B.Tech student specializing in Artificial Intelligence and Machine Learning at Lovely Professional University.
+I have a strong interest in programming, problem-solving, and learning how technology can be used to create practical solutions.
+My academic journey has helped me build a foundation in programming, databases, web technologies, and design tools.
+I enjoy working on hands-on projects that allow me to apply what I learn and understand how different technologies work together.
+I am continuously developing my technical and professional skills while exploring new areas of AI &amp; ML.
+</div></section>
+
+<section id="skills"><div class="kicker">02 / Capabilities</div><h2 class="section-title">Skills</h2><div class="skills">
+<div class="skill">C++<small>Programming</small></div><div class="skill">Python<small>Programming</small></div><div class="skill">C<small>Programming</small></div><div class="skill">DBMS<small>Database</small></div><div class="skill">HTML<small>Web</small></div><div class="skill">Figma<small>Design</small></div><div class="skill">AutoCAD<small>Design Tool</small></div><div class="skill">WPS Office<small>Productivity</small></div><div class="skill">Teamwork<small>Soft Skill</small></div><div class="skill">Good Listener<small>Soft Skill</small></div>
+</div></section>
+
+<section id="experience"><div class="kicker">03 / Responsibility</div><h2 class="section-title">Experience</h2><div class="card"><h3>Academic Projects &amp; Team Assignments</h3><p class="muted">Participated in academic projects and team assignments, developing responsibility and cooperation.</p></div></section>
+
+<section id="project"><div class="kicker">04 / Featured Work</div><h2 class="section-title">Project</h2><div class="card"><div class="tech">MICROCONTROLLER PROJECT</div><h3 class="project-title">Automated Temperature Management System</h3><p class="muted">Arduino Uno • DHT11 • L298N • I2C LCD • Sketch</p></div></section>
+
+<section id="education"><div class="kicker">05 / Academic Path</div><h2 class="section-title">Education</h2><div class="timeline">
+<div class="card"><div class="year">2025 – Present</div><div><h3>Lovely Professional University</h3><p>Bachelor of Technology — AI &amp; ML</p><p class="muted">CGPA: 9.02</p></div></div>
+<div class="card"><div class="year">2024 – 2025</div><div><h3>Higher Secondary Education</h3><p>PCM</p><p class="muted">Percentage: 64%</p></div></div>
+<div class="card"><div class="year">2022 – 2023</div><div><h3>Matriculation</h3><p>10th Standard</p><p class="muted">Percentage: 80%</p></div></div>
+</div></section>
+
+<section id="certificates"><div class="kicker">06 / Learning</div><h2 class="section-title">Certificates</h2><div class="certificate-grid">
+<div class="certificate-card">
+  <div class="certificate-image-wrap"><img src="c2.png" alt="Time Management certificate" class="certificate-image"></div>
+  <div class="certificate-info">
+    <h3>Time Management</h3>
+    <p>TechVeda</p><p class="muted">October 2025</p>
+  </div>
+</div>
+<div class="certificate-card">
+  <div class="certificate-image-wrap"><img src="c1.png" alt="Saylor Academy certificate" class="certificate-image"></div>
+  <div class="certificate-info">
+    <h3>Introduction to Programming I</h3>
+    <p>Saylor Academy</p><p class="muted">January 2026</p>
+    <a class="certificate-link" href="https://learn.saylor.org/mod/certificate/index.php?code=6156050806KS" target="_blank" rel="noopener">View Certificate</a>
+  </div>
+</div>
+<div class="certificate-card">
+  <div class="certificate-image-wrap"><img src="c3.png" alt="Infosys Springboard certificate" class="certificate-image"></div>
+  <div class="certificate-info">
+    <h3>Learning Full Stack React</h3>
+    <p>Infosys Springboard</p><p class="muted">March 2026</p>
+    <a class="certificate-link" href="https://verify.onwingspan.com" target="_blank" rel="noopener">Verify Certificate</a>
+  </div>
+</div>
+</div></section>
+
+<section id="contact"><div class="kicker">07 / Connect</div><h2 class="section-title">Contact</h2><div class="card contact">
+<p>Email: <a href="mailto:sharmakrish095@gmail.com">sharmakrish095@gmail.com</a></p>
+<p>Phone: <a href="tel:+919991106584">+91 9991106584</a></p>
+<p>GitHub: <a href="https://github.com/Krish201207" target="_blank">github.com/Krish201207</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/-krish-sharma" target="_blank">www.linkedin.com/in/-krish-sharma</a></p>
+</div></section>
+
+<footer>© 2026 Krish Sharma • Portfolio</footer>
+</body>
+</html>
